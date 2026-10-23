@@ -1,0 +1,1297 @@
+
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#451b29">
+<meta name="description" content="Velora Studio menyediakan template website profesional, CV online, link in bio, dan katalog digital untuk personal branding dan bisnis.">
+<title>VELORA STUDIO — Digital Template</title>
+
+<style>
+:root {
+  --bg: #fbf5f6;
+  --surface: #fffafb;
+  --ink: #35151f;
+  --muted: #876d76;
+  --gold: #8b3448;
+  --gold-dark: #682337;
+  --gold-light: #f1dce3;
+  --line: #e7cbd4;
+  --dark: #451b29;
+  --radius: 14px;
+  --shadow: 0 12px 35px rgba(69,27,41,.13);
+}
+
+* { box-sizing: border-box; }
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 85px;
+}
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--ink);
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 15px;
+  line-height: 1.65;
+}
+
+a { color: inherit; text-decoration: none; }
+button, input { font: inherit; }
+button { cursor: pointer; }
+img { max-width: 100%; }
+
+nav {
+  position: sticky;
+  top: 0;
+  z-index: 30;
+  background: rgba(251,245,246,.97);
+  backdrop-filter: blur(12px);
+  border-bottom: 1px solid var(--line);
+}
+
+.nav {
+  max-width: 1280px;
+  margin: auto;
+  padding: 15px 28px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+}
+
+.logo {
+  font-size: 23px;
+  letter-spacing: 3px;
+  font-weight: 900;
+  color: var(--dark);
+}
+
+.logo span { color: #a64d66; }
+
+.navlinks {
+  display: flex;
+  gap: 28px;
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.navlinks a { transition: color .2s; }
+.navlinks a:hover { color: var(--gold); }
+
+.hero {
+  max-width: 1280px;
+  margin: auto;
+  padding: 68px 28px 55px;
+  display: grid;
+  grid-template-columns: 1.05fr .95fr;
+  gap: 55px;
+  align-items: center;
+}
+
+.eyebrow {
+  font-size: 11px;
+  letter-spacing: 2.5px;
+  color: var(--gold-dark);
+  font-weight: 800;
+}
+
+h1, h2, .showcase h2 {
+  font-family: Georgia, "Times New Roman", serif;
+  font-weight: 500;
+}
+
+h1 {
+  font-size: clamp(43px, 5vw, 66px);
+  line-height: 1.12;
+  letter-spacing: -1.8px;
+  margin: 18px 0;
+}
+
+h1 em {
+  color: var(--gold-dark);
+  font-weight: 400;
+}
+
+.hero p {
+  font-size: 16px;
+  color: var(--muted);
+  max-width: 550px;
+}
+
+.actions {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin-top: 25px;
+}
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--dark);
+  color: white;
+  padding: 12px 18px;
+  border-radius: 7px;
+  font-size: 12px;
+  letter-spacing: .5px;
+  font-weight: 800;
+  border: 1px solid var(--dark);
+  transition: .2s;
+}
+
+.btn:hover {
+  background: #702438;
+  border-color: #702438;
+  transform: translateY(-1px);
+}
+
+.btn.outline {
+  background: #f1dce3;
+  color: var(--dark);
+  border-color: #d9a9b8;
+}
+
+.btn.outline:hover {
+  background: #e8c4cf;
+  border-color: var(--gold);
+}
+
+.heroart {
+  min-height: 350px;
+  background: linear-gradient(135deg, #f1dce3, #b66b80, #702438);
+  border-radius: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.orb {
+  position: absolute;
+  border: 1px solid #ffffff80;
+  border-radius: 50%;
+}
+
+.orb.one {
+  width: 320px;
+  height: 320px;
+  right: -100px;
+  top: -125px;
+}
+
+.orb.two {
+  width: 240px;
+  height: 240px;
+  left: -85px;
+  bottom: -115px;
+}
+
+.showcase {
+  position: relative;
+  background: #fffafb;
+  padding: 28px;
+  width: 72%;
+  max-width: 330px;
+  border-radius: 8px;
+  box-shadow: 0 18px 45px #451b2930;
+  transform: rotate(-2deg);
+}
+
+.showcase small {
+  color: var(--gold-dark);
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 2px;
+}
+
+.showcase h2 {
+  font-size: 37px;
+  line-height: 1.12;
+  margin: 17px 0;
+}
+
+.showcase p {
+  font-size: 13px;
+  color: var(--muted);
+}
+
+.stats {
+  max-width: 1224px;
+  margin: 0 auto 25px;
+  padding: 23px 15px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  text-align: center;
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+}
+
+.stats > div + div {
+  border-left: 1px solid var(--line);
+}
+
+.stats strong {
+  display: block;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 31px;
+  line-height: 1.3;
+  color: var(--gold-dark);
+}
+
+.stats span {
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 1.2px;
+}
+
+section {
+  max-width: 1280px;
+  margin: auto;
+  padding: 58px 28px;
+}
+
+h2 {
+  font-size: clamp(30px, 3.5vw, 40px);
+  line-height: 1.2;
+  margin: 8px 0 12px;
+}
+
+.muted, .intro {
+  color: var(--muted);
+  font-size: 14px;
+}
+
+.toolbar {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin: 25px 0;
+  align-items: center;
+}
+
+.search {
+  flex: 1;
+  min-width: 220px;
+  background: #fffafb;
+  border: 1px solid #dfbdc8;
+  border-radius: 8px;
+  padding: 12px 14px;
+  font-size: 14px;
+  color: var(--ink);
+}
+
+.search:focus {
+  outline: 2px solid #d9a9b8;
+  border-color: var(--gold);
+}
+
+.filters {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 7px;
+}
+
+.filter {
+  padding: 10px 13px;
+  border: 1px solid #dfbdc8;
+  background: #f8eaf0;
+  border-radius: 7px;
+  font-size: 12px;
+  font-weight: 700;
+  color: var(--dark);
+  transition: .2s;
+}
+
+.filter.active,
+.filter:hover {
+  background: var(--dark);
+  border-color: var(--dark);
+  color: white;
+}
+
+.cat {
+  background: #fffafb;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  padding: 20px;
+  margin: 22px 0;
+}
+
+.cat.bio { background: #fcf2f5; }
+.cat.digital { background: #f5e4ea; }
+
+.cathead {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+  flex-wrap: wrap;
+  margin-bottom: 18px;
+}
+
+.cathead h3 {
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 25px;
+  font-weight: 500;
+  margin: 0;
+}
+
+.cathead p {
+  font-size: 13px;
+  color: var(--muted);
+  margin: 3px 0 0;
+}
+
+.count {
+  font-size: 10px;
+  letter-spacing: 1px;
+  font-weight: 800;
+  color: white;
+  background: var(--gold-dark);
+  padding: 6px 9px;
+  border-radius: 5px;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 15px;
+}
+
+.card {
+  min-width: 0;
+  background: #fffafb;
+  border: 1px solid var(--line);
+  border-radius: 11px;
+  overflow: hidden;
+  transition: transform .2s, box-shadow .2s;
+}
+
+.card:hover {
+  transform: translateY(-3px);
+  box-shadow: var(--shadow);
+}
+
+.cover {
+  width: 100%;
+  height: 175px;
+  aspect-ratio: 1 / 1;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #ead5dc;
+}
+
+.c1  { background: linear-gradient(135deg,#f1dce3,#b98293); }
+.c2  { background: linear-gradient(135deg,#451b29,#8b3448); }
+.c3  { background: linear-gradient(135deg,#f9edf1,#d9b4c0); }
+.c4  { background: linear-gradient(135deg,#f0d9e0,#bd788d); }
+.c5  { background: linear-gradient(135deg,#ead4dd,#a66b80); }
+.c6  { background: linear-gradient(135deg,#f2dfe5,#c08a9b); }
+.c7  { background: linear-gradient(135deg,#f8eaf0,#d7a8b7); }
+.c8  { background: linear-gradient(135deg,#ead1da,#9b596e); }
+.c9  { background: linear-gradient(135deg,#f5e3e9,#bd8496); }
+.c10 { background: linear-gradient(135deg,#efd9e1,#b9778b); }
+.c11 { background: linear-gradient(135deg,#f7e8ed,#c68fa1); }
+
+.cover img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  padding: 8px;
+  box-sizing: border-box;
+  z-index: 1;
+}
+
+.cover:before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 160%;
+  border: 1px solid #ffffff90;
+  border-radius: 50%;
+  transform: rotate(30deg);
+  pointer-events: none;
+}
+
+.cover:has(img):before { display: none; }
+
+.sheet {
+  position: relative;
+  z-index: 1;
+  width: 68%;
+  height: 76%;
+  background: #fffafb;
+  border-radius: 4px;
+  box-shadow: 0 8px 20px #451b2920;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  transform: rotate(-2deg);
+}
+
+.sheet small {
+  font-size: 8px;
+  letter-spacing: 1px;
+  color: var(--gold-dark);
+  font-weight: 800;
+}
+
+.sheet strong {
+  font: 21px Georgia, serif;
+  line-height: 1.1;
+  margin: 9px 0;
+  overflow-wrap: anywhere;
+  color: var(--dark);
+}
+
+.sheet i {
+  width: 45%;
+  height: 2px;
+  background: var(--gold);
+  margin: 3px;
+}
+
+.sheet span {
+  font-size: 8px;
+  color: var(--muted);
+  font-weight: 800;
+}
+
+.num {
+  position: absolute;
+  top: 8px;
+  left: 8px;
+  z-index: 3;
+  background: var(--dark);
+  color: white;
+  padding: 4px 6px;
+  border-radius: 4px;
+  font-size: 9px;
+  font-weight: 800;
+  letter-spacing: .3px;
+}
+
+.info { padding: 13px; }
+
+.category {
+  font-size: 10px;
+  color: var(--gold-dark);
+  font-weight: 800;
+  letter-spacing: .7px;
+  text-transform: uppercase;
+}
+
+.info h4 {
+  font-size: 17px;
+  line-height: 1.35;
+  margin: 4px 0;
+  overflow-wrap: anywhere;
+  color: var(--dark);
+}
+
+.info .style {
+  font-size: 12px;
+  color: var(--muted);
+  margin: 0 0 8px;
+  min-height: 20px;
+}
+
+.price {
+  font-size: 17px;
+  color: var(--dark);
+  font-weight: 900;
+  margin: 8px 0 12px;
+}
+
+.price small {
+  display: block;
+  font-size: 10px;
+  font-weight: 500;
+  color: var(--muted);
+}
+
+.cardactions {
+  display: grid;
+  gap: 7px;
+}
+
+/* TOMBOL DEMO & WHATSAPP — BOX BURGUNDY */
+.cardactions a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  border: 1px solid var(--dark);
+  color: white;
+  background: #7a293f;
+  border-radius: 6px;
+  padding: 10px 4px;
+  font-size: 11px;
+  font-weight: 800;
+  transition: .2s;
+  min-height: 38px;
+}
+
+.cardactions a:first-child {
+  background: #451b29;
+  border-color: #451b29;
+  color: white;
+}
+
+.cardactions a:last-child {
+  background: #f0dce3;
+  border-color: #d5a4b3;
+  color: #451b29;
+}
+
+.cardactions a:hover,
+.cardactions a:first-child:hover,
+.cardactions a:last-child:hover {
+  background: #8b3448;
+  border-color: #8b3448;
+  color: white;
+  transform: translateY(-1px);
+}
+
+.empty {
+  grid-column: 1 / -1;
+  text-align: center;
+  padding: 35px;
+  color: var(--muted);
+}
+
+/* CUSTOM WEBSITE */
+.custom {
+  max-width: none;
+  background: linear-gradient(135deg,#451b29,#702438,#8b3448);
+  color: white;
+  text-align: center;
+  padding: 60px 20px;
+}
+
+.custom .eyebrow { color: #f0c7d3; }
+.custominner { max-width: 760px; margin: auto; }
+.custom h2 { color: white; }
+
+.custom p {
+  font-size: 15px;
+  color: #f0dce2;
+  margin-bottom: 24px;
+}
+
+.custom .btn {
+  background: #f1dce3;
+  color: #451b29;
+  border-color: #f1dce3;
+}
+
+.custom .btn:hover {
+  background: #d9a9b8;
+  border-color: #d9a9b8;
+}
+
+/* CARA ORDER */
+.steps {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+  margin-top: 25px;
+}
+
+.step {
+  background: #fffafb;
+  border: 1px solid var(--line);
+  border-radius: 11px;
+  padding: 22px;
+}
+
+.step b {
+  font-family: Georgia, serif;
+  font-size: 30px;
+  color: var(--gold-dark);
+}
+
+.step h3 { font-size: 17px; margin: 8px 0; }
+
+.step p {
+  font-size: 13px;
+  color: var(--muted);
+  margin: 0;
+}
+
+/* FAQ */
+details {
+  border-bottom: 1px solid var(--line);
+  padding: 17px 0;
+}
+
+summary {
+  cursor: pointer;
+  font-size: 15px;
+  font-weight: 800;
+  color: var(--dark);
+}
+
+details p {
+  font-size: 14px;
+  color: var(--muted);
+}
+
+/* FOOTER */
+footer {
+  background: #30111b;
+  color: white;
+  padding: 40px 28px;
+}
+
+.footerinner {
+  max-width: 1224px;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 25px;
+  flex-wrap: wrap;
+}
+
+footer .logo { color: white; }
+
+footer p {
+  font-size: 13px;
+  color: #e0cbd2;
+}
+
+.socials {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.socials a {
+  border: 1px solid #a66b80;
+  background: #451b29;
+  color: white;
+  border-radius: 6px;
+  padding: 8px 11px;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.socials a:hover {
+  background: #8b3448;
+  border-color: #d9a9b8;
+  color: white;
+}
+
+/* WHATSAPP */
+.floatwa {
+  position: fixed;
+  z-index: 25;
+  bottom: 17px;
+  right: 17px;
+  border-radius: 50px;
+  background: #451b29;
+  color: white;
+  padding: 12px 16px;
+  font-size: 12px;
+  font-weight: 800;
+  box-shadow: 0 7px 22px #451b2940;
+  border: 1px solid #a64d66;
+}
+
+.floatwa:hover { background: #8b3448; }
+
+/* DEMO PREVIEW */
+.modal {
+  display: none;
+  position: fixed;
+  inset: 0;
+  z-index: 100;
+  background: #171714e8;
+  padding: 15px;
+  align-items: center;
+  justify-content: center;
+}
+
+.modal.open { display: flex; }
+
+.modalbox {
+  width: min(1150px, 100%);
+  height: 94vh;
+  background: #451b29;
+  border-radius: 12px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+.modalhead {
+  padding: 12px 15px;
+  background: #ead0d9;
+  color: #451b29;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.modalhead strong { font-size: 14px; }
+
+.modalhead button {
+  background: #451b29;
+  color: white;
+  border: 0;
+  border-radius: 6px;
+  padding: 8px 11px;
+  font-size: 12px;
+  font-weight: 800;
+}
+
+.modalhead a {
+  background: #f8eaf0;
+  color: #682337;
+  border: 1px solid #d9a9b8;
+  border-radius: 6px;
+  padding: 8px 10px;
+  font-size: 12px;
+  font-weight: 800;
+}
+
+.modalhead a:hover {
+  background: #8b3448;
+  color: white;
+}
+
+.modaltools {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+}
+
+#demoFrame {
+  width: 100%;
+  flex: 1;
+  border: 0;
+  background: #fffafb;
+}
+
+#demoHelp {
+  padding: 25px;
+  text-align: center;
+  color: var(--muted);
+}
+
+/* TABLET */
+@media (max-width: 1000px) {
+  .grid { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+  .hero { gap: 30px; }
+  .cover { height: 165px; }
+}
+
+/* HP */
+@media (max-width: 650px) {
+  body { font-size: 14px; }
+
+  .nav { padding: 12px 15px; }
+  .logo { font-size: 19px; letter-spacing: 2px; }
+  .navlinks { gap: 13px; font-size: 12px; }
+  .navlinks a:nth-child(3) { display: none; }
+
+  .hero {
+    grid-template-columns: 1fr;
+    padding: 42px 17px 32px;
+    gap: 25px;
+  }
+
+  h1 { font-size: 44px; }
+  .hero p { font-size: 14px; }
+  .heroart { min-height: 260px; }
+  .showcase { padding: 22px; }
+  .showcase h2 { font-size: 33px; }
+
+  .stats {
+    margin: 0 12px 15px;
+    padding: 15px 3px;
+  }
+
+  .stats strong { font-size: 25px; }
+  .stats span { font-size: 9px; letter-spacing: .5px; }
+
+  section { padding: 42px 14px; }
+  .toolbar { display: block; }
+  .search { width: 100%; margin-bottom: 10px; }
+
+  .filters {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .filter { font-size: 11px; padding: 10px 5px; }
+
+  .cat { padding: 11px; margin: 17px 0; }
+  .cathead h3 { font-size: 22px; }
+  .cathead p { font-size: 12px; }
+  .count { font-size: 9px; }
+
+  .grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 10px;
+  }
+
+  .cover {
+    height: 145px;
+    aspect-ratio: 1 / 1;
+  }
+
+  .cover img { padding: 5px; }
+  .sheet { width: 70%; padding: 6px; }
+  .sheet strong { font-size: 18px; margin: 6px 0; }
+  .sheet small, .sheet span { font-size: 7px; }
+  .num { font-size: 8px; padding: 3px 5px; }
+
+  .info { padding: 9px; }
+  .category { font-size: 9px; }
+  .info h4 { font-size: 15px; }
+  .info .style { font-size: 11px; min-height: 18px; }
+  .price { font-size: 15px; }
+  .price small { font-size: 9px; }
+
+  .cardactions a {
+    font-size: 10px;
+    padding: 9px 2px;
+    min-height: 36px;
+  }
+
+  .custom { padding: 45px 18px; }
+  .custom p { font-size: 13px; }
+  .steps { grid-template-columns: 1fr; gap: 10px; }
+  .step { padding: 18px; }
+
+  footer { padding: 32px 17px; }
+  .footerinner { gap: 18px; }
+  .socials a { font-size: 11px; }
+
+  .modal { padding: 5px; }
+  .modalbox { height: 95vh; }
+  .modalhead { padding: 9px; }
+  .modalhead strong { font-size: 12px; }
+  .modalhead button { font-size: 11px; padding: 7px; }
+  .modaltools { gap: 9px; }
+  .modalhead a { font-size: 11px; }
+
+  .floatwa {
+    right: 10px;
+    bottom: 10px;
+    padding: 10px 12px;
+    font-size: 11px;
+  }
+}
+  </style>
+</head>
+
+<body>
+
+<nav>
+  <div class="nav">
+    <a class="logo" href="#">VELORA<span>.</span></a>
+    <div class="navlinks">
+      <a href="#koleksi">Koleksi</a>
+      <a href="#custom">Custom</a>
+      <a href="#kontak">Kontak</a>
+    </div>
+  </div>
+</nav>
+
+<header class="hero">
+  <div>
+    <div class="eyebrow">DIGITAL CREATIVE STUDIO</div>
+    <h1>Your Digital Look,<br><em>Reimagined.</em></h1>
+    <p>Website cantik, profesional, dan siap membantu kamu tampil lebih percaya diri. Temukan template favoritmu dan wujudkan ide digitalmu bersama Velora Studio.</p>
+    <div class="actions">
+      <a class="btn" href="#koleksi">JELAJAHI TEMPLATE ↗</a>
+      <a class="btn outline" href="#kontak">HUBUNGI KAMI</a>
+    </div>
+  </div>
+
+  <div class="heroart">
+    <div class="orb one"></div>
+    <div class="orb two"></div>
+    <div class="showcase">
+      <small>THE VELORA COLLECTION</small>
+      <h2>Make your<br>own story.</h2>
+      <div style="height:2px;background:#8b3448;margin:17px 0"></div>
+      <p>Modern websites. Beautiful details. Made for you.</p>
+    </div>
+  </div>
+</header>
+
+<div class="stats">
+  <div><strong>07</strong><span>CV ONLINE</span></div>
+  <div><strong>11</strong><span>LINK IN BIO</span></div>
+  <div><strong>11</strong><span>KATALOG DIGITAL</span></div>
+</div>
+
+<section id="koleksi">
+  <div class="eyebrow">FIND YOUR STYLE</div>
+  <h2>Our Template Collection</h2>
+  <p class="intro">Pilih template, lihat demonya, cek harga, lalu booking langsung melalui WhatsApp.</p>
+
+  <div class="toolbar">
+    <input id="search" class="search" type="search" placeholder="Cari template atau kategori..." aria-label="Cari template">
+    <div class="filters">
+      <button class="filter active" data-cat="Semua">Semua Template</button>
+      <button class="filter" data-cat="CV Online">CV Online</button>
+      <button class="filter" data-cat="Link in Bio">Link in Bio</button>
+      <button class="filter" data-cat="Katalog Digital">Katalog Digital</button>
+    </div>
+  </div>
+
+  <div id="catalogGrid"></div>
+</section>
+
+<div class="custom" id="custom">
+  <div class="custominner">
+    <div class="eyebrow">MADE JUST FOR YOU</div>
+    <h2>Want a Custom Design?</h2>
+    <p>Punya warna, fitur, atau referensi sendiri? Yuk, konsultasikan kebutuhan website custom kamu bersama kami.</p>
+    <a class="btn" id="customWA" href="#">KONSULTASI VIA WHATSAPP ↗</a>
+  </div>
+</div>
+
+<section>
+  <div class="eyebrow">SIMPLE & EASY</div>
+  <h2>How to Order</h2>
+  <p class="intro">Tiga langkah praktis untuk memesan template pilihanmu.</p>
+
+  <div class="steps">
+    <div class="step"><b>01</b><h3>Pilih Template</h3><p>Lihat demo dan pilih desain yang paling cocok.</p></div>
+    <div class="step"><b>02</b><h3>Booking</h3><p>Klik WhatsApp untuk konfirmasi harga dan kebutuhan.</p></div>
+    <div class="step"><b>03</b><h3>Personalisasi</h3><p>Kirim materi yang diperlukan dan sepakati detail pengerjaan.</p></div>
+  </div>
+</section>
+
+<section>
+  <div class="eyebrow">FREQUENTLY ASKED QUESTIONS</div>
+  <h2>Things to Know</h2>
+
+  <details>
+    <summary>Apakah harga sudah termasuk custom?</summary>
+    <p>Harga yang ditampilkan adalah harga awal paket. Pastikan detail personalisasi, revisi, dan fitur tambahan dikonfirmasi melalui WhatsApp.</p>
+  </details>
+
+  <details>
+    <summary>Bagaimana cara melihat demo?</summary>
+    <p>Klik Lihat Demo. Website akan ditampilkan dalam jendela preview jika halaman mengizinkan pemuatan melalui iframe. Kamu juga bisa membukanya di tab baru.</p>
+  </details>
+
+  <details>
+    <summary>Bagaimana cara memesan?</summary>
+    <p>Klik Booking WhatsApp pada template yang kamu pilih. Pesan akan terisi otomatis dengan nama template.</p>
+  </details>
+</section>
+
+<footer id="kontak">
+  <div class="footerinner">
+    <div>
+      <a class="logo" href="#">VELORA<span>.</span></a>
+      <p>Your Ideas, Beautifully Online.</p>
+      <p>Template digital dengan sentuhan modern.</p>
+    </div>
+
+    <div>
+      <strong style="font-size:17px;letter-spacing:1px">LET'S CONNECT</strong>
+      <p>Hubungi kami untuk booking dan konsultasi.</p>
+      <div class="socials">
+        <a id="instagram" href="#" target="_blank" rel="noopener">◎ Instagram ↗</a>
+        <a id="tiktok" href="#" target="_blank" rel="noopener">♪ TikTok ↗</a>
+        <a id="footerWA" href="#" target="_blank" rel="noopener">WhatsApp ↗</a>
+      </div>
+      <p>© <span id="year"></span> Velora Studio</p>
+    </div>
+  </div>
+</footer>
+
+<a class="floatwa" id="floatWA" href="#" target="_blank" rel="noopener">☏ Booking WhatsApp</a>
+
+<div class="modal" id="demoModal" role="dialog" aria-modal="true" aria-label="Preview website">
+  <div class="modalbox">
+    <div class="modalhead">
+      <strong id="demoTitle">Preview Template</strong>
+      <div class="modaltools">
+        <a id="openFull" href="#" target="_blank" rel="noopener">Buka Tab</a>
+        <a id="demoOrder" href="#" target="_blank" rel="noopener">Booking</a>
+        <button id="closeDemo" type="button">Tutup ✕</button>
+      </div>
+    </div>
+
+    <div id="demoHelp" hidden style="padding:25px;text-align:center">
+      Link repository belum diatur. Edit GITHUB_BASE di bagian konfigurasi.
+    </div>
+
+    <iframe id="demoFrame" title="Demo website template"></iframe>
+  </div>
+</div>
+
+<script>
+// =======================================
+// PENGATURAN TOKO — EDIT BAGIAN INI
+// =======================================
+const WHATSAPP = "6282143513272";
+const INSTAGRAM = "https://www.instagram.com/mrs.arjuna__/";
+const TIKTOK = "https://www.tiktok.com/@capriwhere/";
+
+// Alamat utama GitHub Pages kamu
+const GITHUB_BASE = "https://laamila.github.io/";
+
+// =======================================
+// 29 TEMPLATE + HARGA
+// =======================================
+const templates = [
+  {category:"CV Online",name:"Sage",style:"Professional & Clean",price:35000,path:"cv/template01.html",image:"cv-template01.png"},
+  {category:"CV Online",name:"Noir",style:"Bold & Elegant",price:50000,path:"cv/template02.html",image:"cv-template02.png"},
+  {category:"CV Online",name:"Ivory",style:"Minimal & Timeless",price:35000,path:"cv/template03.html",image:"cv-template03.png"},
+  {category:"CV Online",name:"Bloom",style:"Soft & Feminine",price:40000,path:"cv/template04.html",image:"cv-template04.png"},
+  {category:"CV Online",name:"Corporate",style:"Modern Business",price:50000,path:"cv/template05.html",image:"cv-template05.png"},
+  {category:"CV Online",name:"Goldline",style:"Premium & Refined",price:50000,path:"cv/template06.html",image:"cv-template06.png"},
+  {category:"CV Online",name:"Minimal",style:"Simple & Modern",price:35000,path:"cv/template07.html",image:"cv-template07.png"},
+
+  {category:"Link in Bio",name:"Affiliate Pick",style:"Personal Branding",price:30000,path:"link-bio/affiliate-pick/"},
+  {category:"Link in Bio",name:"Blue",style:"Soft & Feminine",price:25000,path:"link-bio/blue-authority/"},
+  {category:"Link in Bio",name:"Blush Pink",style:"Content Creator",price:35000,path:"link-bio/blush-pink/"},
+  {category:"Link in Bio",name:"Mocha",style:"Elegant & Personal",price:30000,path:"link-bio/bold-mocha/"},
+  {category:"Link in Bio",name:"Freelance Pro",style:"Dark & Modern",price:35000,path:"link-bio/freelance-pro/"},
+  {category:"Link in Bio",name:"Fuschia",style:"Beauty & Lifestyle",price:30000,path:"link-bio/fuschia-pop/"},
+  {category:"Link in Bio",name:"Lavender",style:"Creative Portfolio",price:35000,path:"link-bio/lavender-dream/"},
+  {category:"Link in Bio",name:"Midnight Noir",style:"Dark & Elegant",price:25000,path:"link-bio/midnight-noir/"},
+  {category:"Link in Bio",name:"Sage",style:"Professional Profile",price:35000,path:"link-bio/sage-studio/"},
+  {category:"Link in Bio",name:"Shop Boutique",style:"Portfolio & Projects",price:35000,path:"link-bio/shop-boutique/"},
+  {category:"Link in Bio",name:"Shop",style:"Social Media Hub",price:30000,path:"link-bio/shop-boutique-v2/"},
+
+  {category:"Katalog Digital",name:"Burgundy",style:"Fashion & Apparel",price:75000,path:"katalog/burgundy/"},
+  {category:"Katalog Digital",name:"Elan Beauty",style:"Beauty & Nail Art",price:75000,path:"katalog/elan-beauty/"},
+  {category:"Katalog Digital",name:"Florist",style:"Flower & Hampers",price:75000,path:"katalog/flower-shop/"},
+  {category:"Katalog Digital",name:"Maison",style:"Luxury & Elegant",price:100000,path:"katalog/maison/"},
+  {category:"Katalog Digital",name:"Noire Terra",style:"Food & Dessert",price:75000,path:"katalog/noire-terracota/"},
+  {category:"Katalog Digital",name:"Noire",style:"Home & Living",price:75000,path:"katalog/noire/"},
+  {category:"Katalog Digital",name:"Novs",style:"Property & Real Estate",price:100000,path:"katalog/nova/"},
+  {category:"Katalog Digital",name:"Popora",style:"Travel & Tour",price:100000,path:"katalog/popora/"},
+  {category:"Katalog Digital",name:"Real Estate",style:"Muslim Fashion",price:75000,path:"katalog/real-estate/"},
+  {category:"Katalog Digital",name:"Terracotta",style:"Gift & Hampers",price:75000,path:"katalog/terracota/"},
+  {category:"Katalog Digital",name:"Travel & Tour",style:"UMKM & General Store",price:75000,path:"katalog/travel-tour/"}
+];
+
+const grid = document.getElementById("catalogGrid");
+const search = document.getElementById("search");
+let activeCat = "Semua";
+let previousFocus = null;
+
+function rupiah(value) {
+  return "Rp" + value.toLocaleString("id-ID");
+}
+
+function demoUrl(item) {
+  return GITHUB_BASE.replace(/\/?$/, "/") + item.path;
+}
+
+function waLink(message) {
+  return "https://wa.me/" + WHATSAPP + "?text=" + encodeURIComponent(message);
+}
+
+function bookingMessage(item) {
+  return "Halo Velora Studio! Saya ingin booking template " +
+    item.name + " (" + item.category + ") dengan harga " +
+    rupiah(item.price) +
+    ". Mohon informasi detail paket dan proses pengerjaannya.";
+}
+
+function render() {
+  const q = search.value.toLowerCase().trim();
+
+  const filtered = templates.filter(t =>
+    (activeCat === "Semua" || t.category === activeCat) &&
+    (
+      t.name.toLowerCase().includes(q) ||
+      t.category.toLowerCase().includes(q) ||
+      t.style.toLowerCase().includes(q)
+    )
+  );
+
+  const categories = [
+    {name:"CV Online",desc:"Tampilkan profil dan pengalamanmu secara profesional.",cls:"cv"},
+    {name:"Link in Bio",desc:"Satukan tautan media sosial dalam satu halaman.",cls:"bio"},
+    {name:"Katalog Digital",desc:"Tampilkan produk dan layanan bisnismu.",cls:"digital"}
+  ];
+
+  let html = "";
+
+  categories.forEach(cat => {
+    if (activeCat !== "Semua" && activeCat !== cat.name) return;
+
+    const items = filtered.filter(t => t.category === cat.name);
+    if (!items.length) return;
+
+    html += `
+      <div class="cat ${cat.cls}">
+        <div class="cathead">
+          <div>
+            <h3>${cat.name}</h3>
+            <p>${cat.desc}</p>
+          </div>
+          <span class="count">${items.length} TEMPLATE</span>
+        </div>
+        <div class="grid">
+    `;
+
+    items.forEach(t => {
+      const index = templates.indexOf(t);
+      const num = String(index + 1).padStart(2, "0");
+      const palette = "c" + ((index % 11) + 1);
+
+      html += `
+        <article class="card">
+          <div class="cover ${palette}">
+            <span class="num">DESIGN ${num}</span>
+            ${
+              t.image
+                ? `<img src="${t.image}" alt="Preview ${t.name}" loading="lazy">`
+                : `<div class="sheet">
+                    <small>VELORA STUDIO</small>
+                    <strong>${t.name}</strong>
+                    <i></i>
+                    <span>${t.category.toUpperCase()}</span>
+                  </div>`
+            }
+          </div>
+
+          <div class="info">
+            <div class="category">${t.category}</div>
+            <h4>${t.name}</h4>
+            <p class="style">${t.style}</p>
+
+            <div class="price">
+              ${rupiah(t.price)}
+              <small>Harga awal · per website</small>
+            </div>
+
+            <div class="cardactions">
+              <a href="${demoUrl(t)}" data-demo="${index}">Lihat Demo ↗</a>
+              <a href="${waLink(bookingMessage(t))}" target="_blank" rel="noopener">Booking WhatsApp</a>
+            </div>
+          </div>
+        </article>
+      `;
+    });
+
+    html += `</div></div>`;
+  });
+
+  grid.innerHTML = html ||
+    '<div class="empty">Template tidak ditemukan. Coba kata kunci lain.</div>';
+}
+
+// BUKA DEMO
+grid.addEventListener("click", e => {
+  const link = e.target.closest("[data-demo]");
+  if (!link) return;
+
+  e.preventDefault();
+
+  const t = templates[Number(link.dataset.demo)];
+  if (!t) return;
+
+  const url = demoUrl(t);
+  previousFocus = link;
+
+  document.getElementById("demoTitle").textContent =
+    t.name + " — Preview Demo";
+
+  document.getElementById("openFull").href = url;
+  document.getElementById("demoOrder").href = waLink(bookingMessage(t));
+
+  document.getElementById("demoHelp").hidden = true;
+  document.getElementById("demoFrame").hidden = false;
+  document.getElementById("demoFrame").src = url;
+
+  document.getElementById("demoModal").classList.add("open");
+  document.body.style.overflow = "hidden";
+  document.getElementById("closeDemo").focus();
+});
+
+// TUTUP DEMO
+function closeDemo() {
+  document.getElementById("demoModal").classList.remove("open");
+  document.body.style.overflow = "";
+  document.getElementById("demoFrame").src = "about:blank";
+
+  if (previousFocus) previousFocus.focus();
+}
+
+document.getElementById("closeDemo").addEventListener("click", closeDemo);
+
+document.getElementById("demoModal").addEventListener("click", e => {
+  if (e.target.id === "demoModal") closeDemo();
+});
+
+document.addEventListener("keydown", e => {
+  if (e.key === "Escape") closeDemo();
+});
+
+// FILTER KATEGORI
+document.querySelectorAll(".filter").forEach(button => {
+  button.addEventListener("click", () => {
+    activeCat = button.dataset.cat;
+
+    document.querySelectorAll(".filter").forEach(item => {
+      item.classList.toggle("active", item === button);
+    });
+
+    render();
+  });
+});
+
+// PENCARIAN
+search.addEventListener("input", render);
+
+// TAUTAN SOSIAL MEDIA
+document.getElementById("instagram").href = INSTAGRAM;
+document.getElementById("tiktok").href = TIKTOK;
+
+// TAUTAN WHATSAPP
+["customWA", "footerWA", "floatWA"].forEach(id => {
+  const element = document.getElementById(id);
+
+  element.href = waLink(
+    "Halo Velora Studio! Saya ingin konsultasi dan booking jasa website."
+  );
+
+  if (id !== "customWA") {
+    element.target = "_blank";
+    element.rel = "noopener";
+  }
+});
+
+// TAHUN OTOMATIS
+document.getElementById("year").textContent = new Date().getFullYear();
+
+// TAMPILKAN KATALOG
+render();
+</script>
+
+</body>
+</html>
